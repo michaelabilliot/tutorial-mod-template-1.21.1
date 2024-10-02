@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorialmod",
+	"version": "${version}",
+	"name": "Tutorial Mod",
+	"description": "Hopefully to add more stuff to the game semi vanilla",
+	"authors": [
+		"DeathByYmir!"
+	],
+	"contact": {
+		"homepage": "https://discord.gg/XQC9FF7qeF",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/tutorialmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ymir.tutorialmod.TutorialMod"
+		],
+		"fabric-datagen": [
+			"net.ymir.tutorialmod.TutorialModDataGenerator"
+		],
+		"client": [
+			"net.ymir.tutorialmod.TutorialModClient"
+		]
+	},
+	"mixins": [
+		"tutorialmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
